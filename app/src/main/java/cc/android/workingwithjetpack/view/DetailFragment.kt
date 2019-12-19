@@ -32,15 +32,7 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        arguments?.let {
-            dogUuid = DetailFragmentArgs.fromBundle(it).dogUuid
-            ageUuid = DetailFragmentArgs.fromBundle(it).ageUuid
-            textView2.text = "Details : "+dogUuid.toString()+" Age : " +ageUuid
-        }
-        fbtn_list.setOnClickListener {
-            val action = DetailFragmentDirections.actionDetailFragmentToListFragment()
-            Navigation.findNavController(it).navigate(action)
-        }
+
     }
 
 
